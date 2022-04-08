@@ -1,0 +1,10 @@
+package com;
+
+public class paitent {
+	String name;
+	 paitent(String name)
+	{
+		this.name=name;
+	}
+
+}

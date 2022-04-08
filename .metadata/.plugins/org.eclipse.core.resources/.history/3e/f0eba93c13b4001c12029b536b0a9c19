@@ -1,0 +1,75 @@
+package com;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Players {
+	 public static void main(String[] args)
+	 {
+	  //code to read values 
+	    Player[] player = new Player[5];
+		   Scanner sc=new Scanner(System.in);
+
+	  for (int i = 0; i < Player.length; i++) {
+	       
+	   int playerId = sc.nextInt();
+	   String playerName = sc.nextLine();
+	   int iccRank = sc.nextInt();
+	   int noOfMatchesPlayed = sc.nextInt();
+	    int totalRunsScored = sc.nextInt();
+	   sc.nextLine();
+	   player[i] = new Player(playerId, playerName, iccRank, noOfMatchesPlayed, totalRunsScored);
+	  }
+	    int target = sc.nextInt();
+       sc.close();
+	  //code to call required method
+	   double[] averageRunRate = findAverageScoreOfPlayers(player, target);
+	  for(int i=0;i<averageRunRate.length;i++){
+	  //code to calculate Grade and display the results
+	if(averageRunRate[i] >=80)
+	  System.out.println("Grade A Player");
+	if(averageRunRate[i]>=50 && averageRunRate[i]<=79)
+	  System.out.println("Grade B Player");
+	else
+	  System.out.println("Grade C Player");
+	 }
+	 }
+	 public static double[] findAverageScoreOfPlayers(Player[] player,int target)
+	 {
+	  //method logic
+	      double[] averageRunRate =new double[0];
+	 	  for(int i=0;i<Player.length;i++)
+	      if(player[i].getNoOfMatchesPlayed()<=(target))
+	    	{
+	    	  averageRunRate=Arrays.copyOf(averageRunRate,averageRunRate.length+1);
+	    	  averageRunRate[averageRunRate.length-1]=(double)player[i].getTotalRunsScored()/player[i].getNoOfMatchesPlayed();
+	    	}
+	   return(averageRunRate);
+	 }
+	}
+
+	class Player
+	{
+	    public static final int length = 0;
+		//code to build player class
+	int playerId;
+	  String playerName;
+	  int iccRank; 
+	  int noOfMatchesPlayed;
+	  int totalRunsScored; 
+	  Player(int playerId,String playerName,int iccRank,int noOfMatchesPlayed,int totalRunsScored)
+	  {
+	  this.playerId=playerId;
+	  this.playerName=playerName;
+	  this.iccRank=iccRank;
+	  this.noOfMatchesPlayed=noOfMatchesPlayed;
+	  this.totalRunsScored=totalRunsScored;
+	  }
+	   public int getNoOfMatchesPlayed ()
+	  {
+	    return noOfMatchesPlayed;
+	  } public int getTotalRunsScored ()
+	  {
+	    return totalRunsScored;
+	  }
+	}
+	 

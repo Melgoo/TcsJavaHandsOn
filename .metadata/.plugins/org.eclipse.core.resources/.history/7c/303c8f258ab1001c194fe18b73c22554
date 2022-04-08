@@ -1,0 +1,18 @@
+package com;
+
+public class JavaExample2 {
+	private static String str="MEGMEY";
+		// TODO Auto-generated method stub
+		static class MyNestedClass{
+			     public void display()
+			     {
+			    	 System.out.println(str);
+			     }
+			   }
+		public static void main(String[] args) {
+			JavaExample2.MyNestedClass obj= new JavaExample2.MyNestedClass();
+			obj.display();
+		}
+	}
+		
+

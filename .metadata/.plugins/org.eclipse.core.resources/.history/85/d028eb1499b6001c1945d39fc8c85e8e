@@ -1,0 +1,36 @@
+package com;
+
+public class Doctor {
+	//default constructor........
+Doctor()
+{
+	//System.out.println("inside Doctor constructor");
+}
+//parameterized constructor................
+Doctor(int id, String name)
+{
+	this.id=id;
+	this.name=name;
+}
+//constructor overloading..............
+Doctor(String name)
+{
+	this.name=name;
+}
+
+	public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+
+	private int id;
+	private String name;
+}

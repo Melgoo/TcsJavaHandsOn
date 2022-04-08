@@ -1,0 +1,36 @@
+package com;
+import java.util.*;
+
+public class MedicinePriceSearch {
+ int batchno;
+ String medicinename;
+ String Dieseas;
+ int Price;
+ //String check;
+ MedicinePriceSearch(int batchno,String medicinename,String Dieseas,int Price)
+ {
+	 this.batchno=batchno;
+	 this.medicinename=medicinename;
+	 this.Dieseas=Dieseas;
+	 this.Price=Price;
+ }
+ void display()
+ {
+	 System.out.println(this.batchno+" "+this.medicinename+" "+this.Dieseas+" "+this.Price);
+ }
+ public static void main(String args[])
+ {
+	 MedicinePriceSearch m1=new  MedicinePriceSearch(12341,"combiflame","headec",140);
+	 MedicinePriceSearch m2=new  MedicinePriceSearch(12342,"oncetCF","Allergy",60);
+	 MedicinePriceSearch m3=new  MedicinePriceSearch(12343,"advil","skinproblem",98);
+	 MedicinePriceSearch m4=new  MedicinePriceSearch(12341,"Mortin","headec",100);
+	 		m1.display();
+	 		m2.display();
+	 		m3.display();
+	 		m4.display();
+	 		Scanner sc=new Scanner(System.in);
+	 	String	check =sc.nextLine();
+	 	System.out.println(check);
+	 		
+ }
+}

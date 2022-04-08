@@ -1,0 +1,34 @@
+package com;
+
+public class Student {
+
+	int Rollno;
+	String Name;
+	String Collage="NSEC";
+	Student(int Rollno,String Name)
+	{
+	this.Rollno=Rollno;
+	this.Name=Name;
+	}
+	void collegechange(String Collage)
+	{
+		Collage="IIT";
+	}
+	void display()
+	{
+		System.out.println("Rollno"+this.Rollno+"Name"+this.Name+"Collage"+Collage);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Student s1=new Student(70,"Mayank");
+Student s2=new Student(121,"Meghna");
+Student s3=new Student(122,"Megha");
+Student s4=new Student(105,"Saurav");
+s1.display();
+s2.display();
+s3.display();
+s4.display();
+
+	}
+
+}
